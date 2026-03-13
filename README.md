@@ -1,10 +1,3 @@
-//
-//  README.md
-//  WaitAMinute
-//
-//  Created by Rizki Siraj on 12/03/26.
-//
-
 # WaitAMinute
 
 **WaitAMinute** is a simple iOS app designed to help users **delay decisions and avoid impulsive actions**.
@@ -20,11 +13,10 @@ The goal of this app is to introduce **intentional friction** between impulse an
 Users can log a decision and choose a delay period before they are allowed to act on it.
 
 Example cooldown options:
-- 10 minutes
-- 1 hour
-- 24 hours
-- 3 days
+- 2 days
 - 7 days
+- 10 days
+- 14 days
 
 Each decision will remain **locked** until the cooldown period ends.
 

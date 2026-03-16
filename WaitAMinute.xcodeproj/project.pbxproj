@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		7EE963A52F631ED200EB5416 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7EE963A42F631EC800EB5416 /* README.md */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		7EE963852F631EAC00EB5416 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -34,9 +30,24 @@
 		7EE963A42F631EC800EB5416 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7E5D459F2F675D570014BC64 /* Exceptions for "WaitAMinute" folder in "WaitAMinuteTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Shared/Model/Decision.swift,
+				Shared/Model/StateOfMind.swift,
+				Shared/Repositories/DecisionRepository.swift,
+			);
+			target = 7EE963832F631EAC00EB5416 /* WaitAMinuteTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		7EE963772F631EAB00EB5416 /* WaitAMinute */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				7E5D459F2F675D570014BC64 /* Exceptions for "WaitAMinute" folder in "WaitAMinuteTests" target */,
+			);
 			path = WaitAMinute;
 			sourceTree = "<group>";
 		};
@@ -242,7 +253,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EE963A52F631ED200EB5416 /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,15 @@
 
 import SwiftUI
 
+enum DisplayedDecision {
+    case active
+    case inactive
+}
+
 struct DecisionListView: View {
+    @State private var displayedDecision: DisplayedDecision = .active
+    
+    
     let columns = [
         GridItem(.flexible(minimum: 40), spacing: 8),
         GridItem(.flexible(minimum: 40), spacing: 8),
@@ -15,7 +23,7 @@ struct DecisionListView: View {
     
     var body: some View {
         ScrollView {
-            Text("delayed decision")
+            Text("delayed decisions.")
                 .font(.title)
                 .fontWeight(.bold)
                 .fontDesign(.rounded)
@@ -23,26 +31,17 @@ struct DecisionListView: View {
 
             LazyVGrid(columns: columns, spacing: 8) {
                 ForEach(1...10, id: \.self) { value in
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 12)
-                            .fill(Color.blue)
-                        VStack(spacing: 16) {
-                            Text("6 days left")
-                                .font(.title3)
-                                .fontWeight(.bold)
-                            Text("Accept Pekerjaan")
-                                .font(.subheadline)
-                            
-                            Circle()
-                                .frame(width: 70, height: 70)
-                        }
-                        .padding(.vertical, 48)
+                    NavigationLink(destination: DecisionDetailView()) {
+                        DecisionCard()
                     }
+                    
                 }
             }
             .padding(.horizontal, 8)
         }
         .padding(.horizontal, 8)
+        .background(.screenBackground)
+        .scrollIndicators(.hidden)
     }
 }
 

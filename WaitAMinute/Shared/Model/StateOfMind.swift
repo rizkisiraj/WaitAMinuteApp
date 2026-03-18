@@ -14,7 +14,7 @@ class StateOfMind {
     var createdAt: Date
     var decision: Decision?
     
-    init(note: String, createdAt: Date, decision: Decision) {
+    init(note: String, createdAt: Date = Date(), decision: Decision? = nil) {
         self.note = note
         self.createdAt = createdAt
         self.decision = decision

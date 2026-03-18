@@ -15,7 +15,6 @@ enum DisplayedDecision {
 struct DecisionListView: View {
     @State private var displayedDecision: DisplayedDecision = .active
     
-    
     let columns = [
         GridItem(.flexible(minimum: 40), spacing: 8),
         GridItem(.flexible(minimum: 40), spacing: 8),

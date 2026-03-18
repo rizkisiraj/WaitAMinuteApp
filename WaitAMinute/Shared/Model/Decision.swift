@@ -16,14 +16,12 @@ class Decision {
     @Relationship(deleteRule: .cascade, inverse: \StateOfMind.decision)
     var stateOfMinds: [StateOfMind]
     
-    var iconName: String
     var createdAt: Date
     
-    init(title: String, dueDate: Date, stateOfMinds: [StateOfMind] = [], iconName: String, createdAt: Date) {
+    init(title: String, dueDate: Date, stateOfMinds: [StateOfMind] = [], createdAt: Date) {
         self.title = title
         self.dueDate = dueDate
         self.stateOfMinds = stateOfMinds
-        self.iconName = iconName
         self.createdAt = createdAt
     }
 }
